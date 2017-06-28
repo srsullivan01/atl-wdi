@@ -16,24 +16,45 @@ Please do not use any resource other than the class wiki
 to answer these questions.
 
 1.  What are the three requirements for completing this course?
+    a) Homework submissions graded 80% or higher
+    b) No more than 3 absences
+    c) All unit projects submitted and meet expectations
+
 2.  At what URL can you find a series of videos covering the terminal, created
     by one of GA's senior instructors?
+    https://github.com/ATL-WDI-Curriculum/atl-wdi/wiki/GA-Youtube-Content
+
 3.  What book by Douglas Crockford is on our recommended reading list?
-4.  According to our Git style guide, when writing the detailed description of
-    a commit in its commit message, what three types of things are most
-    important to mention?
-5.  What does a bug report need to have before it can be submitted to the bug
-    journal?
+    Javascript the Good Parts by Douglas Crockford
+
+4.  According to our Git style guide, when writing the detailed description of a commit in its commit message, what three types of things are most important to mention?
+    Explain why the change was necessary, how the change addresses the issue, and what side effects the change produces.
+
+5.  What does a bug report need to have before it can be submitted to the bug journal?
+    It must have a solution and an explanation
+
 6.  There are three Git tutorials referenced in the Wiki. What are they?
+    a) The Atlassian git tutorials, 
+    b) the git cheatsheet, 
+    c) the git styleguide
+
 7.  List at least two basic UI styling tips that will help your projects
     look good.
-8.  What is the maximum number of absences a student can have, and how many
-    'tardies' are equal to an absence?
+    a) Use spacing between elements to indicate their relationships
+    b) add padding to links or convert to block elements to make the clickable space larger
+    c) keep interaction and design consistent across different pages of project
+
+8.  What is the maximum number of absences a student can have, and how many 'tardies' are equal to an absence?
+    a) The max number of absences is three
+    b) Two late arrivals are equal to one absence
+
 9.  Where can you find a directory of publicly-accessible APIs?
     Give at least one URL.
-10. What two holidays will we have during this course (not counting the long
-    winter break)?
+    https://www.producthunt.com/posts/publicapis
 
+10. What two holidays will we have during this course (not counting the long winter break)?
+    a) 4th of July
+    b) Labor Day 
 ## Submitting Your Work
 
 When you're ready, create an issue on the class repo with
