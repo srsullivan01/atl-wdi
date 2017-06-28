@@ -34,8 +34,8 @@ to answer these questions.
     It must have a solution and an explanation
 
 6.  There are three Git tutorials referenced in the Wiki. What are they?
-    a) The Atlassian git tutorials, 
-    b) the git cheatsheet, 
+    a) The Atlassian git tutorials,
+    b) the git cheatsheet,
     c) the git styleguide
 
 7.  List at least two basic UI styling tips that will help your projects
@@ -54,7 +54,9 @@ to answer these questions.
 
 10. What two holidays will we have during this course (not counting the long winter break)?
     a) 4th of July
-    b) Labor Day 
+    b) Labor Day
+
+    I'll give myself an overall 4 for all my answers. 
 ## Submitting Your Work
 
 When you're ready, create an issue on the class repo with
