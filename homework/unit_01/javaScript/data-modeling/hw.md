@@ -60,13 +60,77 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+//since this is just a to-do list it needs to keep track of data, and record when soemthing is finished. The main level is Project, which is populated with Tasks.
+
+Project
+  - name
+  - description
+  - Set of tasks
+
+Tasks
+  - name
+  - short description
+  - start time
+  - complete time
+
+
+
+  ```javascript
+  var task {
+    name: 'finish homework',
+    description: 'ch 50-55 in science textbook'
+    dateStarted: '07/05/2017',
+    dateCompleted: 'unfinished'
+  };
+
+  var project = {
+    name: 'choose your own adventure game',
+    description: 'build game to study js',
+    setOfTasks: ['create HTML page', 'create CSS page', 'create JS page', 'link the three pages together', 'create basic boilerplate', 'start creating game functionality', 'create win scenarios', 'create clickable start button', 'create clickable reset button', 'create winner screen']
+  };
+  ```
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+//in the application you are presented with album covers. clicking/touching the albums will open them to display photos, which
+//contain detailed descriptions and sharing options at the album and individual level
+user
+ - about section
+ - albumsCreated
+ - photosUploaded
+
+albums
+  - title
+  - short description
+  - photos
+  - share button
+
+photos
+  - title
+  - detailed description
+  - url where image is hosted
+  - share button
+
+  '''javascript
+  var user = {
+    username: 'kissfan89'
+    about: 'a blank section that can be customized to include personal information'
+    albumsCreated: ['Psycho Circus Merch Collection', 'Atlanta 2007 Concert', 'Chicago 2014 Concert']
+    photosUploaded: ['images/photos1.jpg', 'images/photos2.jpg', 'images/photos3.jpg']
+  }
+  var albums = {
+    title: 'Psycho Circus Merch Collect'
+    description: 'Favorite items from the comic and album'
+    photoset: ['images/photos1.jpg', 'images/photos2.jpg']
+  }
+  var photos = {
+    title: 'Action figures'
+    description: 'Gene and Ace with their comic book weapons'
+    url: 'images/photos1.jpg'
+  }
+javascript '''
 
 ### 3. Home Automation Manager
 
@@ -75,7 +139,20 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+//No information needs to be stored long term. The temperature is stored as a function of the house because most houses only have one thermostat. Lights are named and grouped by rooms for usability.
+
+''JavaScript
+Light {
+  lightLevel: medium';
+  Room: 'study';
+  fixture: 'desk lamp';
+}
+
+Home {
+  temperature: '75 degrees'
+  setOfLights: ['kitchen', 'living room', 'study', 'bedroom', 'bedroom2', 'bathroom', 'bathroom2']
+}
+javascript'''
 
 ### 4. Sneaker Store
 
@@ -83,7 +160,44 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+//customers need to be able to see a list of products, an order-in-progress (cart), and a list of what they currently have in their order. Information should be presented in a straight forward way without excessive data, with prices and totals clearly marked.
+
+Cart:
+  - total
+  - list of items
+  - order status
+  - date shipped
+
+Order Item:
+  - name
+  - quantity
+
+Sneakers:
+  - brand
+  - size
+  - color
+  - price
+
+'''''javascript
+
+Cart {
+  listOfItems: ["addidas", "nikes", "soap shoes"];
+  total: "$200.00";
+  orderStatus: 'Shipped';
+  dateCompleted: '07/05/2017';
+}
+
+orderItem {
+  name: 'soap shoes';
+  quantity: 1;
+}
+
+sneakers {
+  brand: 'soap';
+  size: 10;
+  color: 'red, white stripe';
+  price: '$50.00';
+}
 
 ## Representing Abstractions in Code
 
@@ -139,7 +253,7 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+The advantage of presenting data this way is that stations can be referenced by name rather than by their index in an array. It is convenient to retrieve information. The clearest disadvantage is that no information is being stored. An extra object would need to be added to tell travelers their current location. That could also be used as a reference point for the app to calculate the distance to their desired stop.
 
 ### 6. Doctor Appointment App
 
@@ -242,7 +356,9 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+Example one has the advantage of storing data in reference to the doctor. This makes it very easy to find appointments for staff, but less easy for patients (people with chronic illnesses, for example, might see multiple doctors every week and have trouble keeping names straight when they have other higher priority information to remember). The appointment field in example one does not name a doctor, which would make it almost impossible to retrieve that information even when the patient is on time.
+
+Example two is more patient focused. It would only require that a person know when their appointment was to retrieve data about their doctor. This could also work well for office staff, who could work backwards with the data a patient remembers to find their doctor. This approach makes it harder for staff to retrieve their own appointments, which could result in doctors who are late (more late than usual) to appointments. Method two would be easiest for a patient portal, and method one would work well for in-house scheduling.
 
 ## Tying It Together
 
@@ -253,13 +369,54 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+    Player:
+    - username
+    - avatar
+
+   Game:
+   - an X player
+   - an O player
+   - set of moves that have been made
+
+   Move:
+   - position on board
+   - player token
 
 b.  How might those entities be represented in JavaScript code?
-
-  > Answer here
+  var xPlayer = {
+    username: 'tic_tac_bro';
+    avatarURL: 'images/photo1.jpg'
+  }
+  var moves = {
+    playerToken: 'X';
+    position: 4;
+  }
+     var exampleGame = {
+       xPlayer: {
+         username: 'tic_tac_bro';
+         avatarURL: 'images/photo1.jpg'
+       },
+       oPlayer: {
+         username: 'burned_toast';
+         avatarURL: 'images/catPhoto2.jpg';
+       }
+       moves: [
+         {
+           playerToken: 'O';
+           position: 3
+         },
+         {
+           playerToken: 'X';
+           position: 4
+         },
+         {
+           playerToken: 'O';
+           position: 5
+         }
+       ]
+   }
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+  There needs to be some representation of the game, the easiest way to do this being a 'board' with pieces, each possible position assigned a numeric value. It would need to store the history of moves, or else it would fall to players to remember that (which would be the opposite of fun). Storing it this way also makes it easier to calculate win conditions. Three in a row can be checked by an easy function, so 
