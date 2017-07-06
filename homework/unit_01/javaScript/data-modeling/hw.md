@@ -419,4 +419,8 @@ b.  How might those entities be represented in JavaScript code?
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
+<<<<<<< HEAD
   There needs to be some representation of the game, the easiest way to do this being a 'board' with pieces, each possible position assigned a numeric value. It would need to store the history of moves, or else it would fall to players to remember that (which would be the opposite of fun). Storing it this way also makes it easier to calculate win conditions. Three in a row can be checked by an easy function, so
+=======
+  There needs to be some representation of the game, the easiest way to do this being a 'board' with pieces, each possible position assigned a numeric value. It would need to store the history of moves, or else it would fall to players to remember that (which would be the opposite of fun). Storing it this way also makes it easier to calculate win conditions. Three in a row can be checked by an easy function, so
+>>>>>>> 729edcc7bdde6abf30acc8628331f3c74a57fb2d
