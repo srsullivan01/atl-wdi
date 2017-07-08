@@ -6,12 +6,16 @@ See LICENSE for details.
 
 body {
   padding: 20px;
+  background-color: #E6F9AF;
+  color: #0D0630;
 }
 
 .component {
   padding: 30px;
-  background-color: pink;
+  background-color: #8BBEB2;
   margin: 10px;
+  border-radius: 25px;
+  
 }
 
 main {
@@ -20,10 +24,14 @@ main {
 }
 
 .counter {
-  border: black solid 1px;
+  border: #0D0630 solid 1px;
   margin: 1px;
   text-align: center;
   background-color: violet;
   width: 150px;
   float: left;
+}
+
+button {
+  color: #0D0630;
 }
