@@ -17,6 +17,13 @@ const CounterCollection = {
     });
     return this.lastCountId;
   },
+  getName: function(name){
+    let counterName = document.getElementById('name');
+    let headingName = document.createElement('h3');
+    h3.appendChild(counterName);
+    document.CounterComponent.appendChild(headingName);//turn input for name value to h3
+  },
+  
   getCounterValue: function(countId){
     console.log(`read counter #${countId}`);
     let counter = this.counters.find(function(counter){
@@ -52,7 +59,7 @@ const Presenter = {
     console.log(`insert counter component #${newCountId}`);
     let newCounterComponent = document.createElement('div');
   newCounterComponent.innerHTML =
-  `<h3>Count: <span>0</span></h3> <button class='increment'> +1 </button> <button class='delete'> Delete </button>`;
+  `<h3>Count: <span>0</span></h3> <form><input type="text" id="name"><input type="submit" value="submit"></form><button class='increment'> +1 </button> <button class='delete'> Delete </button>`;
   newCounterComponent.className += 'counter';
   newCounterComponent.dataset.countId = newCountId;
   newCounterComponent.getElementsByClassName('increment')[0].onclick = AppController.onClickIncrement;
@@ -66,8 +73,8 @@ const Presenter = {
   },
   removeCounterComponent: function(countId){             // REACH
     console.log(`remove counter component #${countId}`);
-    let counterComponent = document.querySelector(`[data-count-id="${countId}"]`);
-    console.log(counterComponent, CounterComponent.parent);
+    let counterComponent = document.querySelector(`[data-count-id="${countId}"]`)
+    console.log(counterComponent, counterComponent.parent);
     counterComponent.parentNode.removeChild(counterComponent);
   }
 };
@@ -81,6 +88,7 @@ const AppController = {
   },
   onClickIncrement: function(event){
     let countId = Number(event.target.parentNode.dataset.countId);
+    console.log(`click increment #${countId}`);
     CounterCollection.incrementCounter(countId);
     Presenter.refreshCounterComponent(countId);
   },
