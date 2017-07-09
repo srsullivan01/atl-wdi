@@ -15,7 +15,7 @@ body {
   background-color: #8BBEB2;
   margin: 10px;
   border-radius: 25px;
-  
+
 }
 
 main {
@@ -25,11 +25,13 @@ main {
 
 .counter {
   border: #0D0630 solid 1px;
+  color: #0D0630;
   margin: 1px;
   text-align: center;
-  background-color: violet;
+  background-color: #384E77;
   width: 150px;
   float: left;
+  border-radius: 25px;
 }
 
 button {
