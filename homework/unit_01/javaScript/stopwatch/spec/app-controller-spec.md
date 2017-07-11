@@ -4,7 +4,12 @@
 
 ```markdown
 1.  It retrieves the current time values (mins, secs, millisecs) from `Stopwatch`.
+ //find time values
+ //create variables for time values
+ //put time values into variables
+
 2.  It calls `updateTimeDisplay` on `ViewEngine`.
+
 ```
 
 ## `handleClickStart`
