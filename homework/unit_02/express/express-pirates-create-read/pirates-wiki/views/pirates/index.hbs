@@ -1,0 +1,11 @@
+<h1> Noteworth Pirates </h1>
+<a href="/pirates/new">add a new pirate</a>
+<ul>
+  {{#each pirates}}
+    <li>Name <a href="/pirates/{{@index}}">{{name}}</a></li>
+    <form method="POST" action="/pirates/{{@index}}?_method=DELETE">
+      <button>DELETE</button>
+    <form>
+    <br>
+  {{/each}}
+</ul>
