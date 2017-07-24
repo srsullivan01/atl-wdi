@@ -24,6 +24,25 @@ class Tomagotchi {
     console.log(this.restedness -= 1 + " is the current level of restedness.")
     return restedness -= 1;
   }
+  start(){
+    console.log("Starting " + this.name);
+    var self = this;
+    this.hungerTimer = setInterval(function() {
+      self.cry();
+    }, 6000);
+    this.yawnTimer = setInterval(function() {
+      self.yawn();
+    }, 10000);
+    this.sickTimer = setInterval(function() {
+      self.puke();
+    }, 25000);
+  }
+  stop(){
+    console.log(this.name + " is finished playing for now.");
+    clearInterval(this.hungerTimer);
+    clearInterval(this.yawnTimer);
+    clearInterval(this.sickTimer);
+  }
 }
 
 //create new Tamagotchis
@@ -35,3 +54,5 @@ console.log(Steve);
 console.log(Betty);
 
 Steve.cry();
+Betty.puke();
+Steve.yawn();
