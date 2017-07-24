@@ -11,7 +11,18 @@ class Tomagotchi {
   }
   cry(){
     console.log("WAAAAH! " + this.name + " is upset!");
-    console.log(this.foodInTummy -=1 );
+    console.log(this.health -=1 + " is the current level of health.");
+    return this.health -= 1;
+  }
+  puke(){
+    console.log("blech! " + this.name + " threw up.")
+    console.log(this.foodInTummy -= 1 + " is the current level of food.")
+    return foodInTummy -= 1;
+  }
+  yawn() {
+    console.log("yaaaawn...." + this.name + " is sleepy.")
+    console.log(this.restedness -= 1 + " is the current level of restedness.")
+    return restedness -= 1;
   }
 }
 
