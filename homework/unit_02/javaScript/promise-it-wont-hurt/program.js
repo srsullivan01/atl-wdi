@@ -1,9 +1,9 @@
 var promise = new Promise(function (fulfill, reject) {
-  // After the timeout reaches 300ms, fulfill the promise with value
-  // 'FULFILLED!'.
-
   setTimeout(function () {
-    fulfill('FULFILLED!');
+    reject(new Error('REJECTED!'));
   }, 300);
 });
-promise.then(console.log);
+function onReject(error) {
+  console.log(error.message);
+}
+promise.then(null, onReject);
