@@ -17,12 +17,12 @@ class Tomagotchi {
   puke(){
     console.log("blech! " + this.name + " threw up.")
     console.log(this.foodInTummy -= 1 + " is the current level of food.")
-    return foodInTummy -= 1;
+    return this.foodInTummy -= 1;
   }
   yawn() {
     console.log("yaaaawn...." + this.name + " is sleepy.")
     console.log(this.restedness -= 1 + " is the current level of restedness.")
-    return restedness -= 1;
+    return this.restedness -= 1;
   }
   start(){
     console.log("Starting " + this.name);
@@ -56,3 +56,20 @@ console.log(Betty);
 Steve.cry();
 Betty.puke();
 Steve.yawn();
+
+//buttons
+document.getElementById("startButton").addEventListener("click", function(){
+    start();
+});
+document.getElementById("stopButton").addEventListener("click", function(){
+    stop();
+});
+document.getElementById("feedButton").addEventListener("click", function(){
+    player.feedTamagotchi();
+});
+document.getElementById("restButton").addEventListener("click", function(){
+    player.knockOutTamagotchi();
+});
+document.getElementById("medsButton").addEventListener("click", function(){
+    player.medicateTamagotchi();
+});
