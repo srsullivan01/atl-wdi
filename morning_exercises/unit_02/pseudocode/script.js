@@ -13,10 +13,6 @@
     - Divide total cost of large barrels by number of barrels */
 
 var barrels = function(small, large, total){
-  var smallBarrel = 60;
-  var largeBarrel = (total - (small * smallBarrel)) / large;
-
-return largeBarrel;
 };
 
 //*************************
