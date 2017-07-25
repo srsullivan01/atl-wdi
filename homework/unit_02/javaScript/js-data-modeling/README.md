@@ -30,7 +30,30 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
 ```
-Write your answer here or in a separate js file.
+var exampleAccount = {
+  userID: number,
+  username: string,
+  password: string,
+  dateAccountCreated: date,
+  lastLogin: date,
+  associatedAccounts: [{
+    userID: number,
+    username: string,
+    password: string,
+    dateAccountCreated: date,
+    lastLogin: date,
+    mailProvider: string,
+    emailsSentToAccount: {[
+      sender: email address,
+      body: string,
+      dateRecieved: date,
+      ]}
+    }]
+}
+
+
+
+
 ```
 
 ### 2. Radio on the Internet app
@@ -39,7 +62,39 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 
 
 ```
-Write your answer here or in a separate js file.
+var exampleRadioStations = {
+  ID: number,
+  genre: string,
+  popularityRanking: number,
+  usersFollowing: array of usernames,
+  playlists: {[
+    genre: string,
+    popularityRanking: number,
+    songs: {[
+      title: string,
+      artist: string,
+      genre: string,
+      timesPlayed: number,
+      ]}
+    ]}
+}
+var exampleUser = {
+  ID: number,
+  username: string,
+  password: string,
+  favoritePlaylists: {[
+    playlists: {[
+      genre: string,
+      popularityRanking: number,
+      songs: {[
+        title: string,
+        artist: string,
+        genre: string,
+        timesPlayed: number,
+        ]}
+      ]}
+    ]}
+}
 ```
 
 ### 3. Rock Concert App
@@ -47,19 +102,147 @@ Write your answer here or in a separate js file.
 This app will be a tool for managing all of your favorite bands' concerts; it will keep track of their tour dates, ticket purchasing, and next recommended show.
 
 ```
-Write your answer here or in a separate js file.
+var exampleUser = {
+  id: number,
+  username: string,
+  password: string,
+  dateCreated: date,
+  lastLogin: date,
+  lastConcertAttended: {
+    bandName: array,
+    location: array,
+    date: date
+
+  }
+  favorite bands: [{
+    bandName: array
+    concerts: {[
+      upcoming: date, string(location),
+      ticketPurchase: string(link to external app),
+      mostRecent: date, string(location),
+      previous: date, string(location),
+      ]}
+    usersFollowing: [usernames]
+    }]
+}
+var exampleBand = {
+  bandName:
+  concerts: {[
+    upcoming: date, string(location),
+    ticketPurchase: string(link to external app),
+    mostRecent: date, string(location),
+    previous: date, string(location),
+    ]}
+  usersFollowing: [usernames]
+}
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
 
+```
+var exampleUser = {
+  id: number,
+  username: string,
+  password: string,
+  dateCreated: date,
+  lastLogin: date,
+  location: GPS data,
+  favoriteCoffeeShops: {
+    shopName: string,
+    shopLocation: GPS data,
+    favoriteDrinks: {
+      drinkName: string,
+      drinkPrice: number,
+      sizeOptions: [array]
+    }
+  }
+  shoppingCart: {
+    drinkName: string,
+    coffeeShopBoughtFrom: string,
+    price: number,
+    orderComplete: boolean
+  }
+  previousOrders: {
+      drinkName: string,
+      coffeeShopBoughtFrom: string,
+      price: number,
+      orderComplete: boolean
+      dateOrdered: date,
+      review: string
+    }
+  nearbyCoffeeShops: {
+    shopName: string,
+    shopLocation: GPS data,
+    menu: {
+      drinkName: string,
+      drinkPrice: number,
+      sizeOptions: [array]
+    }
+  }
+}
+var exampleCoffeeShop = {
+  shopName: string,
+  shopLocation: GPS data,
+  menu: {
+    drinkName: string,
+    drinkPrice: number,
+    sizeOptions: [array]
+  }
+}
+```
+
 ### 5. Team Tracker App
 
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
 ```
-Write your answer here or in a separate js file.
+var exampleUserProfile = {
+  id: number,
+  username: string,
+  password: string,
+  dateCreated: date,
+  lastLogin: date,
+  playersFollowing: {
+    playerName: string,
+    recentGames: string,
+  playerStats: {
+    rushingYards: number,
+    passingYards: number,
+    Tackles: number,
+  }
+  favoriteTeams: {
+    [
+    teamId: number,
+    teamName: string,
+    sportPlayed: string,
+    players: [
+    playerName: string,
+      recentGames: string,
+    playerStats: {
+      rushingYards: number,
+      passingYards: number,
+      Tackles: number,
+    ]
+    ]
+  }
+}
+var exampleTeam = {
+  teamId: number,
+  teamName: string,
+  sportPlayed: string,
+  usersFollowing: [usernames]
+  players: [
+  playerName: string,
+    recentGames: string,
+  playerStats: {
+    rushingYards: number,
+    passingYards: number,
+    Tackles: number,
+  ]
+  ]
+}
 ```
 
 
@@ -68,7 +251,7 @@ Write your answer here or in a separate js file.
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
 
 ```
-Write your answer here or in a separate js file.
+Trying to determine what information from one object would be needed for another, trying to determine if that information would be needed in one place or mulitple, if information would need to be shared as one-to-one, one-to-many, or many-to-many
 ```
 
 ### Reading and Videos for Tomorrow
