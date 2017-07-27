@@ -6,7 +6,14 @@
 
 	<div id="edit-form" class="donut-container-show">
 
-		<<<< YOUR WHOLE FORM GOES HERE >>>>
+		<form action = "/donuts/{{donut._id}}?_method=PUT">
+			<input type="text" placeholder="name" name="name" >
+			<input type="text" placeholder="description" name="description" >
+			<input type="number" placeholder="price" name="price" >
+			<input type="number" placeholder="qty" name="qty" >
+		</form>
+
+
 
 	</div>
 </main>
