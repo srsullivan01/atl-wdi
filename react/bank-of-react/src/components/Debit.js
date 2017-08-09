@@ -4,15 +4,13 @@ import axios from 'axios';
 
 class Debit extends Component{
   render() {
-    const debitDescription = this.props.description;
-    const debitAmount = this.props.amount;
-    const debitDate = this.props.date;
+
 
     return(
         <div>
-          <h2>description: {debitDescription}</h2>
-          <h2>amount: {debitAmount}</h2>
-          <h2>date: {debitDate}</h2>
+          <h2>description: {props.description}</h2>
+          <h2>amount: {props.amount}</h2>
+          <h2>date: {props.date}</h2>
         </div>
     );
   };

@@ -5,13 +5,12 @@ import {Link} from 'react-router-dom';
 
 const DebitsList = (props) => {
 
-     const debitComponents = this.props.debit.map((debits, index) => {
+     const debitComponents = props.debit.map((debits) => {
        return <Debit
-          description={this.props.debit.description}
-          amount={this.props.debit.amount}
-          date={this.props.debit.date}
-          key={index}
-          index={index}/>
+          description={debit.description}
+          amount={debit.amount}
+          date={debit.date}
+        />
      });
 
 
