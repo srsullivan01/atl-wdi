@@ -38,11 +38,43 @@ Then, use the clues below to create the appropriate SQL queries to help you find
 
   - **Clue #1:** We recently got word that someone fitting Carmen Sandiego's description has been traveling through Southern Europe. She's most likely traveling someplace where she won't be noticed, so find the least populated country in Southern Europe, and we'll start looking for her there.
 
+//Sort by population
+SELECT population FROM country DESC; (nope, not that)
+//needs region, country and population last 20
+SELECT name, population FROM country WHERE region='Southern Europe' ORDER BY population;
+
   - **Clue #2:** Now that we're here, we have insight that Carmen was seen attending language classes in this country's officially recognized language. Check our databases and find out what language is spoken in this country, so we can call in a translator to work with you.
+SELECT * FROM country WHERE name = 'Holy See(Vatican City State)';
+SELECT * FROM countrylanguage WHERE countrycode = 'VAT';
 
   - **Clue #3:** We have new news on the classes Carmen attended: our gumshoes tell us she's moved on to a different country, a country where people speak *only* the language she was learning. Find out which nearby country speaks nothing but that language.
+  //need countries that speak only italian and are in southern europe
+  SELECT countrycode, isofficial FROM countrylanguage WHERE language = 'Italian';
 
+
+  countrycode | isofficial
+ -------------+------------
+  ITA         | t
+  SMR         | t
+  VAT         | t
+  ARG         | f
+  AUS         | f
+  LIE         | f
+  BEL         | f
+  BRA         | f
+  LUX         | f
+  MCO         | f
+  CHE         | t
+  CAN         | f
+  FRA         | f
+  DEU         | f
+  USA         | f
+ (15 rows)
+
+ ITA, SMR, VAT, CHE
   - **Clue #4:** We're booking the first flight out: maybe we've actually got a chance to catch her this time. There are only two cities she could be flying to in the country. One is named the *same* as the country – that would be too obvious. We're following our gut on this one; find out what other city in that country she might be flying to.
+
+  //SELECT * FROM city WHERE countrycode = 'SMR';
 
 <hr>
 &#x1F534; COMMIT 1<br>
