@@ -71,14 +71,23 @@ In a SQL file named [realty_seed.sql](realty_seed.sql), write commands that will
 In the file [realty.sql](realty.sql), write the SQL commands you would use to retrieve the following information from your database. Test each command in PSQL to make sure it is correct:
 
 1. The average square footage of all offices.
+SELECT AVG(square_footage) FROM office;
 2. The total number of apartments.
+SELECT COUNT(*) FROM apartment;
 3. The apartments where there is no tenant
+SELECT * FROM apartment WHERE occupied = false;
 4. The names of all of the companies
+SELECT name FROM offices;
 5. The number of cubicles and bathrooms in the 3rd office
+SELECT cubicles, bathrooms FROM office WHERE id=3;
 6. The storefronts that have kitchens
+SELECT * from storefront WHERE kitchen = true;
 7. The storefront with the highest square footage and outdoor seating
+ELECT owner, square_footage FROM storefront ORDER BY square_footage DESC LIMIT 1;
 8. The office with the lowest number of cubicles
+SELECT company_name, cubicles FROM office ORDER BY cubicles ASC LIMIT 1;
 9. The office with the most cubicles and bathrooms
+SELECT company_name, cubicles, bathrooms FROM offices ORDER BY cubicles + bathrooms DESC LIMIT 1;
 
 
 &#x1F534; COMMIT 4<br>
