@@ -23,53 +23,53 @@ Answer should be no more than a couple of sentences. Refer to the reading.
 1. According to Metz, what is Object-oriented design about?
 
 ```
-Your Answer Here
+Managing dependencies. OOD is a set of techniques that ensure objects can tolerate change.
 ```
 
 2. What does SOLID stand for?
 
 ```
-Your Answer Here
+Singe responsibility, open-closed, Liskov Substitution, Interface segregation, and Dependency Inversion. (who was liskov and why is their substitution superior to others)
 ```
 
 3. Ruby is a class-based object-oriented language. What does that mean?
 
 ```
-Your Answer Here
+Classes are defined as extensions of existing classes and can inherit from their parent classes,
 ```
 
 4. Where are methods defined in Ruby?
 
 ```
-Your Answer Here
+within classes
 ```
 
 5. Why does single Responsibility matter?
 
 ```
-Your Answer Here
+It breaks your code down into smaller pieces that adapt to change more easily and can be organized more easily
 ```
 
 6. What does `attr_reader` do?
 
 ```
-Your Answer Here
+it creates encapsulated methods
 ```
 
 7. What are 4 benefits Metz outlines for methods that have a single responsibility?
 
 ```
-Your Answer Here
+previously hidden qualities can be exposed, comments are less necessary, smaller methods are easier to reuse, smaller methods are easier to move to another class
 ```
 
 8. What are 4 things an object knows when it has a dependency?
 
 ```
-Your Answer Here
+the name of another class, the name of a message it will send somewhere, the arguments that message requires, the order of those arguments
 ```
 
 9. Dependency management is core to creating future-proof applications. What does injecting dependencies and isolating dependencies do? What are their benefits?
 
 ```
-Your Answer Here
+Injecting dependencies reduces explicit dependencies within classes. Isolating dependencies means limiting their extraneous use. Both of these makes it easier to design lasting code. 
 ```
