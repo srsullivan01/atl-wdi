@@ -31,6 +31,21 @@
     puts "I see. Your name is #{name} and your hobbies are #{hobbies}."
 
 6.  myFirstArray = []
-myFirstArray = ["Hail", "and", "well", "met", "my dude.", 1, 2, 3, 4]
-puts myFirstArray.last
-puts myFirstArray.first
+    myFirstArray = ["Hail", "and", "well", "met", "my dude.", 1, 2, 3, 4]
+    puts myFirstArray.last
+    puts myFirstArray.first
+    myFirstArray[myFirstArray.index("and")]= "Joe"
+    myFirstArray[myFirstArray.index("well")]= 3
+    myFirstArray.push("true")
+    puts myFirstArray.at(4).class
+
+7.  myFavoriteAnimals = {
+      Edgar: "Donkey",
+      Beau: "Cat",
+      Pearl: "Sheep",
+      Osette: "Hyena",
+      Atticus: "Opossum"
+    }
+    myFavoriteAnimals[:Edgar] = "Bear"
+    favoriteMovie = {}
+    favoriteMovie = {movie: "The Shining"}
