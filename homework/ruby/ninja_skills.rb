@@ -28,4 +28,9 @@
     name = gets.chomp
     puts "What are your hobbies?"
     hobbies = gets.chomp
-    puts "I see. Your name is #{name} and your hobbies are #{hobbies}"
+    puts "I see. Your name is #{name} and your hobbies are #{hobbies}."
+
+6.  myFirstArray = []
+myFirstArray = ["Hail", "and", "well", "met", "my dude.", 1, 2, 3, 4]
+puts myFirstArray.last
+puts myFirstArray.first
