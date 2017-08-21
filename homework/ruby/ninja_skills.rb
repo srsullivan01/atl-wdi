@@ -23,3 +23,9 @@
     g = "2"
     gToNumber = 2
     puts g.to_i + gToNumber
+
+5.  puts "What should I call you?"
+    name = gets.chomp
+    puts "What are your hobbies?"
+    hobbies = gets.chomp
+    puts "I see. Your name is #{name} and your hobbies are #{hobbies}"
