@@ -15,3 +15,11 @@
     puts e
     d = e
     puts d
+
+4.  christine = "Hi, I'm Christine"
+    likesTo = "long walks on the beach, kinda."
+    tims = " and I "
+    puts christine + tims + likesTo
+    g = "2"
+    gToNumber = 2
+    puts g.to_i + gToNumber
